@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.board{
+    background-color: #24252A;
+}
+li, a{
+    font-family: "Montserraat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+.text{
+    justify-content: center;
+    color: white;
+}
+.text:hover{  
+ text-shadow: 0 0 10px white, 0 0 40px white, 0 0 80px white;
+}
+.nav{
+    position:sticky;
+    top: 0px;
+    height: 65px;
+    background-color: white;
+}
+.navigationbar{
+    position: relative;
+    display: flex;
+    height: 50px;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0px 2%;
+    background-color: #24252A;
+    margin: 0px auto 0px auto; 
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-content: center;
+}
+.logoname{
+    display: flex;
+    margin: 0px auto 0px auto;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+.logo{
+    cursor: pointer;
+    width: 35px;
+    border-radius: 20%;
+    margin: 0px 0px 0px 10px;
+    justify-content: center;
+}
+.logo:hover{
+    box-shadow: 0 0 10px white, 0 0 40px white, 0 0 80px white;
+}
+.logotext{
+    cursor: pointer;
+    font-size: 45px;
+    color: #edf0f1;
+    margin: 0px 10px 0px 10px;    
+}
+.logotext:hover{
+    text-shadow: 0 0 10px white, 0 0 40px white, 0 0 80px white;
+
+}
+.navigation{
+    position: relative;
+    display: flex;
+    height: 50px;
+    justify-content:center;
+    align-items: center;
+    margin: 0px auto 0px auto;
+}
+.navigationmenu{
+    position:absolute;
+    cursor: pointer;
+    right: 3%;
+    top: 10px;
+    display: none;
+    justify-content: center;
+}
+.line{
+    width: 24px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 5px;
+}
+.navigation ul{
+    display: flex;
+    list-style: none;
+}
+.navigation ul li{
+    position:relative;
+    display: block;
+    width: 100px;
+    padding: 0px 10px;
+    z-index: 1;
+}
+.navigation ul li a{
+    position: relative;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    transition: all 0.5s ease 0s;
+}
+.navigation ul li a .text{
+    position:absolute;
+}
+.navigation ul li.active a .text{
+    color: #24252A;
+}
+.indicator{
+    position:absolute;
+    top: 5px;
+    background: white;
+    width: 100px;
+    height: 45px;
+    border-top-left-radius: 15%;
+    border-top-right-radius: 15%;
+    border: 2px solid white ;
+    transition: all 0.5s ease 0s;
+}
+.indicator::before{
+    content: '';
+    position:absolute;
+    bottom: -2px;
+    left: -22px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-bottom-right-radius: 50%;
+    box-shadow: 10px 0px 0 0 white;
+}
+.indicator::after{
+    content: '';
+    position:absolute;
+    bottom: -2px;
+    right: -22px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-bottom-left-radius: 50%;
+    box-shadow: 0px 10px 0px 0 white;
+}
+.banner{
+    z-index: -1;
+    position: relative;
+    height: auto;
+    padding: 0px 2%;
+    justify-content: center;
+    align-items: center;
+}
+.slider{
+    z-index: -1;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 500%;
+}
+.page{
+    height: 100vh;
+    background-color: white;
+}
+.navigation ul li:nth-child(1).active ~ .indicator
+{
+    transform: translateX(calc(100px * 0));
+}
+.navigation ul li:nth-child(2).active ~ .indicator
+{
+    transform: translateX(calc(100px * 1));
+}
+.navigation ul li:nth-child(3).active ~ .indicator
+{
+    transform: translateX(calc(100px * 2));
+}
+.navigation ul li:nth-child(4).active ~ .indicator
+{
+    transform: translateX(calc(100px * 3));
+}
+
+
